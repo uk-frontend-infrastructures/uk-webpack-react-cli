@@ -1,0 +1,25 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"env": {
+		"node": true,
+		"browser": true,
+		"es2021": true
+	},
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"extends": [
+		"eslint-config-standard",
+		"plugin:@typescript-eslint/recommended", // 使用@typescript-eslint/eslint-plugin的推荐规则
+		"prettier" // 放在最后
+	],
+	"plugins": ["react", "prettier"],
+	"rules": {
+		"prettier/prettier": "error", // 对于不符合prettier报eslint错误
+		"@typescript-eslint/no-var-requires": 0
+	}
+}
